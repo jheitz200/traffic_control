@@ -1,0 +1,16 @@
+---
+
+to_server: https://tm.cdnlab.comcast.net/
+to_username: admin
+to_passwd: password
+seelog_config: /opt/ansible_client/conf/seelog.xml
+
+# NOTE: any blank entries here will be filled in by OS_* environment variables if found
+OS_AUTH_URL: ""
+OS_USERNAME: ""
+OS_PASSWORD: ""
+OS_TENANT_NAME: ""
+
+type:
+- logstash
+- zookeeper
