@@ -1,0 +1,268 @@
+[Debug] 2016/03/31 13:09:03.7156 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/03/31 13:09:03.7164 traffic_ops.go:203 request: request http://127.0.0.1:59862/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/03/31 13:09:03.7165 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/03/31 13:09:03.7166 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Debug] 2016/03/31 13:09:44.8949 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/03/31 13:09:44.8958 traffic_ops.go:203 request: request http://127.0.0.1:59897/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/03/31 13:09:44.8959 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/03/31 13:09:44.8960 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/03/31 13:09:44.8965 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:59899/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/03/31 13:09:44.8967 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/03/31 13:09:44.8971 traffic_ops.go:203 request: request http://127.0.0.1:59901/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/03/31 13:09:44.8972 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/03/31 13:09:44.8973 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/03/31 13:09:44.8977 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:59903/api/1.2/servers.json?
+[Debug] 2016/03/31 13:09:44.8977 user.go:14 User: Requesting URL '/api/1.0/users'
+[Info] 2016/03/31 13:09:44.8982 traffic_ops.go:203 request: request http://127.0.0.1:59905/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/03/31 13:09:44.8983 user.go:36 User: Retrieved 1 users
+[Debug] 2016/03/31 13:09:44.8984 user.go:14 User: Requesting URL '/api/1.0/users'
+[Error] 2016/03/31 13:09:44.8986 user.go:18 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:59907/api/1.2/users.json
+[Debug] 2016/03/31 13:09:44.8987 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/03/31 13:09:44.8989 traffic_ops.go:203 request: request http://127.0.0.1:59909/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/03/31 13:09:44.8990 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/03/31 13:09:44.8991 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/03/31 13:11:16.8647 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/03/31 13:11:16.8655 traffic_ops.go:203 request: request http://127.0.0.1:59950/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/03/31 13:11:16.8656 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/03/31 13:11:16.8657 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/03/31 13:11:16.8662 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:59952/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/03/31 13:11:16.8663 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/03/31 13:11:16.8667 traffic_ops.go:203 request: request http://127.0.0.1:59954/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/03/31 13:11:16.8668 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/03/31 13:11:16.8669 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/03/31 13:11:16.8672 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:59956/api/1.2/servers.json?
+[Debug] 2016/03/31 13:11:16.8673 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/03/31 13:11:16.8675 traffic_ops.go:203 request: request http://127.0.0.1:59958/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/03/31 13:11:16.8676 user.go:35 User: Retrieved 1 users
+[Debug] 2016/03/31 13:11:16.8676 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/03/31 13:11:16.8678 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:59960/api/1.2/users.json
+[Debug] 2016/03/31 13:11:16.8679 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/03/31 13:11:16.8681 traffic_ops.go:203 request: request http://127.0.0.1:59962/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/03/31 13:11:16.8681 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/03/31 13:11:16.8682 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 08:51:08.7320 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 08:51:08.7328 traffic_ops.go:203 request: request http://127.0.0.1:52339/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 08:51:08.7329 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 08:51:08.7331 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 08:51:08.7336 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:52341/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 08:51:08.7337 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 08:51:08.7342 traffic_ops.go:203 request: request http://127.0.0.1:52343/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 08:51:08.7343 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 08:51:08.7344 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 08:51:08.7348 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:52345/api/1.2/servers.json?
+[Debug] 2016/04/04 08:51:08.7349 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 08:51:08.7353 traffic_ops.go:203 request: request http://127.0.0.1:52347/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 08:51:08.7353 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 08:51:08.7354 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 08:51:08.7357 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:52349/api/1.2/users.json
+[Debug] 2016/04/04 08:51:08.7358 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 08:51:08.7361 traffic_ops.go:203 request: request http://127.0.0.1:52351/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 08:51:08.7362 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 08:51:08.7363 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 08:52:29.3757 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 08:52:29.3765 traffic_ops.go:203 request: request http://127.0.0.1:52368/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 08:52:29.3767 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 08:52:29.3768 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 08:52:29.3771 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:52370/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 08:52:29.3772 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 08:52:29.3774 traffic_ops.go:203 request: request http://127.0.0.1:52372/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 08:52:29.3775 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 08:52:29.3776 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 08:52:29.3780 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:52374/api/1.2/servers.json?
+[Debug] 2016/04/04 08:52:29.3780 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 08:52:29.3783 traffic_ops.go:203 request: request http://127.0.0.1:52376/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 08:52:29.3784 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 08:52:29.3784 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 08:52:29.3786 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:52378/api/1.2/users.json
+[Debug] 2016/04/04 08:52:29.3787 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 08:52:29.3789 traffic_ops.go:203 request: request http://127.0.0.1:52380/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 08:52:29.3790 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 08:52:29.3790 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 09:06:05.3196 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 09:06:05.3204 traffic_ops.go:191 request: request http://127.0.0.1:54844/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 09:06:05.3206 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 09:06:05.3207 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 09:06:05.3211 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54846/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 09:06:05.3212 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 09:06:05.3216 traffic_ops.go:191 request: request http://127.0.0.1:54848/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 09:06:05.3217 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 09:06:05.3218 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 09:06:05.3220 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54850/api/1.2/servers.json?
+[Debug] 2016/04/04 09:06:05.3221 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 09:06:05.3224 traffic_ops.go:191 request: request http://127.0.0.1:54852/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 09:06:05.3224 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 09:06:05.3225 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 09:06:05.3227 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54854/api/1.2/users.json
+[Debug] 2016/04/04 09:06:05.3228 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 09:06:05.3231 traffic_ops.go:191 request: request http://127.0.0.1:54856/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 09:06:05.3231 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 09:06:05.3232 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 09:07:25.7462 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 09:07:25.7470 traffic_ops.go:191 request: request http://127.0.0.1:54942/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 09:07:25.7472 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 09:07:25.7473 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 09:07:25.7479 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54944/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 09:07:25.7480 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 09:07:25.7484 traffic_ops.go:191 request: request http://127.0.0.1:54946/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 09:07:25.7485 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 09:07:25.7486 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 09:07:25.7489 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54948/api/1.2/servers.json?
+[Debug] 2016/04/04 09:07:25.7490 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 09:07:25.7492 traffic_ops.go:191 request: request http://127.0.0.1:54950/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 09:07:25.7493 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 09:07:25.7493 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 09:07:25.7496 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54952/api/1.2/users.json
+[Debug] 2016/04/04 09:07:25.7497 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 09:07:25.7499 traffic_ops.go:191 request: request http://127.0.0.1:54954/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 09:07:25.7500 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 09:07:25.7501 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 09:07:36.8799 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 09:07:36.8807 traffic_ops.go:191 request: request http://127.0.0.1:54964/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 09:07:36.8808 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 09:07:36.8809 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 09:07:36.8813 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54966/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 09:07:36.8815 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 09:07:36.8819 traffic_ops.go:191 request: request http://127.0.0.1:54968/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 09:07:36.8819 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 09:07:36.8820 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 09:07:36.8824 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54970/api/1.2/servers.json?
+[Debug] 2016/04/04 09:07:36.8825 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 09:07:36.8828 traffic_ops.go:191 request: request http://127.0.0.1:54972/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 09:07:36.8828 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 09:07:36.8829 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 09:07:36.8832 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:54974/api/1.2/users.json
+[Debug] 2016/04/04 09:07:36.8833 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 09:07:36.8836 traffic_ops.go:191 request: request http://127.0.0.1:54976/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 09:07:36.8837 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 09:07:36.8838 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 09:26:42.9715 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 09:26:42.9724 traffic_ops.go:191 request: request http://127.0.0.1:55529/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 09:26:42.9725 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 09:26:42.9726 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 09:26:42.9729 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55531/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 09:26:42.9730 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 09:26:42.9734 traffic_ops.go:191 request: request http://127.0.0.1:55533/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 09:26:42.9734 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 09:26:42.9736 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 09:26:42.9738 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55535/api/1.2/servers.json?
+[Debug] 2016/04/04 09:26:42.9739 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 09:26:42.9742 traffic_ops.go:191 request: request http://127.0.0.1:55537/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 09:26:42.9743 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 09:26:42.9743 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 09:26:42.9746 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55539/api/1.2/users.json
+[Debug] 2016/04/04 09:26:42.9746 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 09:26:42.9749 traffic_ops.go:191 request: request http://127.0.0.1:55541/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 09:26:42.9750 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 09:26:42.9751 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 09:35:58.9682 config.go:75 loadFile: Loading config file: 'conf/config.yml'
+[Debug] 2016/04/04 09:35:58.9684 main.go:17 main: ---------------------
+
+ Config 
+	 Config File:             conf/config.yml
+	 Traffic Ops Server:      http://127.0.0.1:3000
+	 Traffic Ops Username:    admin
+	 Type:                    [logstash zookeeper]
+	 HTTP Bind Address:Port:  127.0.0.1:8080
+	 Seelog Config:           conf/seelog.xml
+----------------------------------------------------------------------
+
+[Debug] 2016/04/04 09:36:13.3528 config.go:75 loadFile: Loading config file: 'conf/config.yml'
+[Debug] 2016/04/04 09:36:13.3530 main.go:17 main: ---------------------
+
+ Config 
+	 Config File:             conf/config.yml
+	 Traffic Ops Server:      http://127.0.0.1:3000
+	 Traffic Ops Username:    admin
+	 Type:                    [logstash zookeeper]
+	 HTTP Bind Address:Port:  127.0.0.1:8080
+	 Seelog Config:           conf/seelog.xml
+----------------------------------------------------------------------
+
+[Debug] 2016/04/04 09:36:35.0056 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 09:36:35.0065 traffic_ops.go:191 request: request http://127.0.0.1:55623/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 09:36:35.0066 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 09:36:35.0068 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 09:36:35.0072 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55625/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 09:36:35.0072 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 09:36:35.0077 traffic_ops.go:191 request: request http://127.0.0.1:55627/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 09:36:35.0078 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 09:36:35.0079 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 09:36:35.0082 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55629/api/1.2/servers.json?
+[Debug] 2016/04/04 09:36:35.0083 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 09:36:35.0086 traffic_ops.go:191 request: request http://127.0.0.1:55631/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 09:36:35.0086 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 09:36:35.0087 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 09:36:35.0090 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55633/api/1.2/users.json
+[Debug] 2016/04/04 09:36:35.0090 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 09:36:35.0094 traffic_ops.go:191 request: request http://127.0.0.1:55635/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 09:36:35.0094 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 09:36:35.0095 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 09:36:39.3470 config.go:75 loadFile: Loading config file: 'conf/config.yml'
+[Debug] 2016/04/04 09:36:39.3471 main.go:17 main: ---------------------
+
+ Config 
+	 Config File:             conf/config.yml
+	 Traffic Ops Server:      http://127.0.0.1:3000
+	 Traffic Ops Username:    admin
+	 Type:                    [logstash zookeeper]
+	 HTTP Bind Address:Port:  127.0.0.1:8080
+	 Seelog Config:           conf/seelog.xml
+----------------------------------------------------------------------
+
+[Debug] 2016/04/04 09:39:45.9668 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 09:39:45.9676 traffic_ops.go:191 request: request http://127.0.0.1:55755/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 09:39:45.9677 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 09:39:45.9678 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 09:39:45.9681 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55757/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 09:39:45.9682 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 09:39:45.9685 traffic_ops.go:191 request: request http://127.0.0.1:55759/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 09:39:45.9686 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 09:39:45.9687 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 09:39:45.9690 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55761/api/1.2/servers.json?
+[Debug] 2016/04/04 09:39:45.9691 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 09:39:45.9693 traffic_ops.go:191 request: request http://127.0.0.1:55763/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 09:39:45.9694 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 09:39:45.9695 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 09:39:45.9698 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55765/api/1.2/users.json
+[Debug] 2016/04/04 09:39:45.9699 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 09:39:45.9701 traffic_ops.go:191 request: request http://127.0.0.1:55767/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 09:39:45.9702 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 09:39:45.9702 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 09:45:36.9229 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 09:45:36.9239 traffic_ops.go:191 request: request http://127.0.0.1:55928/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 09:45:36.9240 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 09:45:36.9241 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 09:45:36.9244 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55930/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 09:45:36.9245 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 09:45:36.9249 traffic_ops.go:191 request: request http://127.0.0.1:55932/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 09:45:36.9250 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 09:45:36.9251 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 09:45:36.9254 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55934/api/1.2/servers.json?
+[Debug] 2016/04/04 09:45:36.9255 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 09:45:36.9258 traffic_ops.go:191 request: request http://127.0.0.1:55936/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 09:45:36.9259 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 09:45:36.9259 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 09:45:36.9262 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:55938/api/1.2/users.json
+[Debug] 2016/04/04 09:45:36.9263 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 09:45:36.9266 traffic_ops.go:191 request: request http://127.0.0.1:55940/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 09:45:36.9267 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 09:45:36.9268 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Debug] 2016/04/04 09:51:23.8453 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash?cdn=cdn-1'
+[Info] 2016/04/04 09:51:23.8462 traffic_ops.go:191 request: request http://127.0.0.1:56161/api/1.2/servers.json?type=LOGSTASH, StatusCode[200]
+[Debug] 2016/04/04 09:51:23.8463 logstash.go:46 Logstash: Retrieved 1 LOGSTASH servers
+[Debug] 2016/04/04 09:51:23.8464 logstash.go:15 Logstash: Requesting URL '/api/1.0/logstash'
+[Error] 2016/04/04 09:51:23.8467 logstash.go:23 Logstash: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:56163/api/1.2/servers.json?type=LOGSTASH
+[Debug] 2016/04/04 09:51:23.8468 server.go:16 Server: Requesting URL '/api/1.0/server'
+[Info] 2016/04/04 09:51:23.8472 traffic_ops.go:191 request: request http://127.0.0.1:56165/api/1.2/servers.json?, StatusCode[200]
+[Debug] 2016/04/04 09:51:23.8472 server.go:36 get: Retrieved 1 servers
+[Debug] 2016/04/04 09:51:23.8473 server.go:16 Server: Requesting URL '/api/1.0/servers'
+[Error] 2016/04/04 09:51:23.8477 server.go:31 get: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:56167/api/1.2/servers.json?
+[Debug] 2016/04/04 09:51:23.8478 user.go:13 User: Requesting URL '/api/1.0/users'
+[Info] 2016/04/04 09:51:23.8481 traffic_ops.go:191 request: request http://127.0.0.1:56169/api/1.2/users.json, StatusCode[200]
+[Debug] 2016/04/04 09:51:23.8482 user.go:35 User: Retrieved 1 users
+[Debug] 2016/04/04 09:51:23.8483 user.go:13 User: Requesting URL '/api/1.0/users'
+[Error] 2016/04/04 09:51:23.8485 user.go:17 User: 401 Unauthorized[401] - Error requesting Traffic Ops http://127.0.0.1:56171/api/1.2/users.json
+[Debug] 2016/04/04 09:51:23.8486 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
+[Info] 2016/04/04 09:51:23.8489 traffic_ops.go:191 request: request http://127.0.0.1:56173/api/1.2/servers.json?type=ZOOKEEPER, StatusCode[200]
+[Debug] 2016/04/04 09:51:23.8490 zookeeper.go:29 Zookeeper: Retrieved 1 ZOOKEEPER servers
+[Debug] 2016/04/04 09:51:23.8490 zookeeper.go:16 Zookeeper: Requesting URL '/api/1.0/zookeeper'
