@@ -1,8 +1,8 @@
 ---
 
 to_server: https://tm.cdnlab.comcast.net/
-to_username: admin
-to_passwd: password
+to_username: ""
+to_passwd: ""
 seelog_config: /opt/ansible_client/conf/seelog.xml
 
 # NOTE: any blank entries here will be filled in by OS_* environment variables if found

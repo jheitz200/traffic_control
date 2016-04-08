@@ -27,7 +27,7 @@ func StartServer(c *utils.Config, to *client.Session) {
 
 	seelog.Debugf("Server available at %s", c.BindAddr)
 
-	http.Handle(fmt.Sprintf("/api/%s/servers", version), Handle{TrafficOps: to, Handler: Server})
+	http.Handle(fmt.Sprintf("/api/%s/servers", version), Handle{Config: c, TrafficOps: to, Handler: Server})
 
 	seelog.Critical(http.ListenAndServe(c.BindAddr, nil))
 	os.Exit(1)

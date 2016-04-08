@@ -11,19 +11,20 @@ import (
 
 	"github.com/cihub/seelog"
 	"github.com/jheitz200/host_generator/infrastructure/host_generator/openstack"
+	"github.com/jheitz200/host_generator/infrastructure/host_generator/utils"
 	"github.com/jheitz200/traffic_control/traffic_ops/client"
 	gophercloud "github.com/rackspace/gophercloud/openstack/compute/v2/servers"
 )
 
 // Server formats Traffic Ops server information for use in puppet.
-func Server(to *client.Session, w http.ResponseWriter, r *http.Request) {
+func Server(c *utils.Config, to *client.Session, w http.ResponseWriter, r *http.Request) {
 	seelog.Debugf("Requesting URL '%s'", r.URL)
 
 	switch r.Method {
 	case "POST":
-		post(to, w, r)
+		post(c, to, w, r)
 	case "GET":
-		get(to, w, r)
+		get(c, to, w, r)
 	default:
 		err := fmt.Errorf("Invalid method: %s", r.Method)
 
@@ -41,7 +42,7 @@ func Server(to *client.Session, w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func get(to *client.Session, w http.ResponseWriter, r *http.Request) {
+func get(c *utils.Config, to *client.Session, w http.ResponseWriter, r *http.Request) {
 	t := strings.ToUpper(r.URL.Query().Get("type"))
 	if t == "" {
 		err := fmt.Errorf("type parameter is required")
@@ -84,7 +85,7 @@ func get(to *client.Session, w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(servers)
 }
 
-func post(to *client.Session, w http.ResponseWriter, r *http.Request) {
+func post(c *utils.Config, to *client.Session, w http.ResponseWriter, r *http.Request) {
 	t := strings.ToUpper(r.URL.Query().Get("type"))
 	if t == "" {
 		err := fmt.Errorf("type must be provided, e.g. api/1.0/servers?type=foo")
@@ -123,7 +124,7 @@ func post(to *client.Session, w http.ResponseWriter, r *http.Request) {
 	}
 	seelog.Debugf("Retrieved %d %s servers from Traffic Ops", len(servers), t)
 
-	cr, err := openstack.New()
+	cr, err := openstack.New(c)
 	if err != nil {
 		seelog.Error(err)
 
@@ -155,7 +156,7 @@ func post(to *client.Session, w http.ResponseWriter, r *http.Request) {
 
 		if _, found := instance[name]; !found {
 			// create it
-			i, err := cr.Create(openstack.ServerConfig(s))
+			i, err := cr.Create(openstack.ServerConfig(s), c)
 			if err != nil {
 				seelog.Error(err)
 

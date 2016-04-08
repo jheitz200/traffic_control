@@ -18,10 +18,13 @@ type Config struct {
 	SeelogConfig string `yaml:"seelog_config"`
 
 	// Openstack Confgi Parameters
-	OpenstackAuthURL    string `yaml:"OS_AUTH_URL"`
-	OpenstackUsername   string `yaml:"OS_USERNAME"`
-	OpenstackPassword   string `yaml:"OS_PASSWORD"`
-	OpenstackTenantName string `yaml:"OS_TENANT_NAME"`
+	OpenstackAuthURL     string `yaml:"OS_AUTH_URL"`
+	OpenstackUsername    string `yaml:"OS_USERNAME"`
+	OpenstackPassword    string `yaml:"OS_PASSWORD"`
+	OpenstackTenantName  string `yaml:"OS_TENANT_NAME"`
+	OpenstackRegionName  string `yaml:"OS_REGION_NAME"`
+	OpenstackNetworkName string `yaml:"OS_NETWORK"`
+	Image                string `json:"image"`
 
 	// Traffic Ops Config Parameters
 	TOServer   string   `yaml:"to_server"`
@@ -100,6 +103,9 @@ func (c *Config) loadFlags(arguments []string) error {
 	f.StringVar(&c.OpenstackUsername, "os-username", c.OpenstackUsername, "Openstack username")
 	f.StringVar(&c.OpenstackPassword, "os-password", c.OpenstackPassword, "Openstack password")
 	f.StringVar(&c.OpenstackTenantName, "os-tenant", c.OpenstackTenantName, "Openstack tenant name")
+	f.StringVar(&c.OpenstackRegionName, "os-region", c.OpenstackRegionName, "Openstack region name")
+	f.StringVar(&c.OpenstackNetworkName, "os-network", c.OpenstackNetworkName, "Openstack network name")
+	f.StringVar(&c.Image, "image", c.Image, "Openstack Image")
 
 	f.StringVar(&c.TOServer, "to-server", c.TOServer, "Traffic Ops server URL")
 	f.StringVar(&c.TOUsername, "to-username", c.TOUsername, "Traffic Ops username")
@@ -153,6 +159,22 @@ func (c *Config) validate() []string {
 		e = append(e, "OS_TENANT_NAME")
 	}
 
+	err = setFromEnv(&c.OpenstackRegionName, "OS_REGION_NAME")
+	if err != nil {
+		// err = fmt.Errorf("OS_REGION_NAME cannot be blank or %v", err)
+		e = append(e, "OS_REGION_NAME")
+	}
+
+	err = setFromEnv(&c.OpenstackNetworkName, "OS_NETWORK")
+	if err != nil {
+		// err = fmt.Errorf("OS_NETWORK cannot be blank or %v", err)
+		e = append(e, "OS_NETWORK")
+	}
+
+	if c.Image == "" {
+		e = append(e, "image")
+	}
+
 	return e
 }
 
@@ -190,6 +212,9 @@ func (c *Config) String() string {
 	fmt.Fprintf(&buf, "\t Auth URL:                %s\n", c.OpenstackAuthURL)
 	fmt.Fprintf(&buf, "\t Username:                %s\n", c.OpenstackUsername)
 	fmt.Fprintf(&buf, "\t Tenant Name:             %s\n", c.OpenstackTenantName)
+	fmt.Fprintf(&buf, "\t Region Name:             %s\n", c.OpenstackRegionName)
+	fmt.Fprintf(&buf, "\t Network Name:             %s\n", c.OpenstackNetworkName)
+	fmt.Fprintf(&buf, "\t Image:                   %s\n", c.Image)
 	fmt.Fprintf(&buf, "Traffic Ops: \n")
 	fmt.Fprintf(&buf, "\t Server:                  %s\n", c.TOServer)
 	fmt.Fprintf(&buf, "\t Username:                %s\n", c.TOUsername)

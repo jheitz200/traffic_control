@@ -12,7 +12,7 @@ func (c Creator) ListServers(f func(s servers.Server) bool) ([]servers.Server, e
 	opts := servers.ListOpts{}
 
 	// Retrieve a pager (i.e. a paginated collection)
-	pager := servers.List(c.client, opts)
+	pager := servers.List(c.Client, opts)
 
 	allservers := []servers.Server{}
 	// Define an anonymous function to be executed on each page's iteration
@@ -21,6 +21,7 @@ func (c Creator) ListServers(f func(s servers.Server) bool) ([]servers.Server, e
 		if err != nil {
 			return false, err
 		}
+
 		for _, s := range serverList {
 			// "s" will be a servers.Server
 			if f == nil || f(s) {
@@ -28,8 +29,10 @@ func (c Creator) ListServers(f func(s servers.Server) bool) ([]servers.Server, e
 				allservers = append(allservers, s)
 			}
 		}
+
 		return true, nil
 	})
+
 	if err != nil {
 		return nil, err
 	}
