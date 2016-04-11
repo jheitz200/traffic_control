@@ -213,7 +213,7 @@ func (c *Config) String() string {
 	fmt.Fprintf(&buf, "\t Username:                %s\n", c.OpenstackUsername)
 	fmt.Fprintf(&buf, "\t Tenant Name:             %s\n", c.OpenstackTenantName)
 	fmt.Fprintf(&buf, "\t Region Name:             %s\n", c.OpenstackRegionName)
-	fmt.Fprintf(&buf, "\t Network Name:             %s\n", c.OpenstackNetworkName)
+	fmt.Fprintf(&buf, "\t Network Name:            %s\n", c.OpenstackNetworkName)
 	fmt.Fprintf(&buf, "\t Image:                   %s\n", c.Image)
 	fmt.Fprintf(&buf, "Traffic Ops: \n")
 	fmt.Fprintf(&buf, "\t Server:                  %s\n", c.TOServer)

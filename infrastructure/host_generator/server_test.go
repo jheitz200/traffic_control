@@ -6,42 +6,22 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/jheitz200/host_generator/infrastructure/host_generator/fixtures"
+	"github.com/jheitz200/host_generator/infrastructure/host_generator/utils"
 	"github.com/jheitz200/test_helper"
 	"github.com/jheitz200/traffic_control/traffic_ops/client"
 )
 
 func TestServer(t *testing.T) {
-	req, err := http.NewRequest("GET", "/api/1.0/server", nil)
+	req, err := http.NewRequest("GET", "/api/1.0/server?type=EDGE", nil)
 	if err != nil {
 		testHelper.Error(t, "%s", err)
 	}
 
-	r := client.ServerResponse{
-		Response: []client.Server{
-			client.Server{
-				DomainName:    "town.net",
-				HostName:      "kable",
-				InterfaceMtu:  "9000",
-				InterfaceName: "bond0",
-				IPAddress:     "127.0.0.1",
-				IPGateway:     "127.0.0.1",
-				IPNetmask:     "255.255.255.252",
-				TCPPort:       "80",
-
-				Cachegroup:   "mid-northeast",
-				CDNName:      "cdn-1",
-				ID:           "555",
-				LastUpdated:  "2016-01-22 08:14:30",
-				PhysLocation: "Denver",
-				Profile:      "logstash",
-				Rack:         "RR 119.02",
-				Status:       "ONLINE",
-				Type:         "LOGSTASH",
-			},
-		},
-	}
-
+	r := fixtures.Servers()
 	server := testHelper.ValidHTTPServer(r)
+	defer server.Close()
+
 	resp := httptest.NewRecorder()
 
 	var httpClient http.Client
@@ -52,29 +32,31 @@ func TestServer(t *testing.T) {
 		UserAgent: &httpClient,
 	}
 
-	testHelper.Context(t, "Given the need to test a successful Get /api/1.0/server")
-	{
-		Server(&to, resp, req)
+	var c utils.Config
 
-		if resp.Code != 200 {
+	testHelper.Context(t, "Given the need to test a successful Get /api/1.0/server?type=EDGE")
+	{
+		Server(&c, &to, resp, req)
+
+		if resp.Code != http.StatusOK {
 			testHelper.Error(t, "\t Should get back \"200\" for HTTPStatusCode, got: \"%d\"", resp.Code)
 		} else {
 			testHelper.Success(t, "\t Should get back \"200\" for HTTPStatusCode")
 		}
 
-		if !strings.Contains(resp.Body.String(), "\"domainName\":\"town.net\"") {
+		if !strings.Contains(resp.Body.String(), "\"domainName\":\"albuquerque.nm.albuq.kabletown.com\"") {
 			testHelper.Error(t, "\t Should get back \"town.net\" for \"domainName\", got \"%s\"", resp.Body.String())
 		} else {
 			testHelper.Success(t, "\t Should get back \"town.net\" for \"domainName\"")
 		}
 
-		if !strings.Contains(resp.Body.String(), "\"hostName\":\"kable\"") {
+		if !strings.Contains(resp.Body.String(), "\"hostName\":\"edge-alb-01\"") {
 			testHelper.Error(t, "\t Should get back \"kable\" for \"hostName\", got \"%s\"", resp.Body.String())
 		} else {
 			testHelper.Success(t, "\t Should get back \"kable\" for \"hostName\"")
 		}
 
-		if !strings.Contains(resp.Body.String(), "\"ipAddress\":\"127.0.0.1\"") {
+		if !strings.Contains(resp.Body.String(), "\"ipAddress\":\"10.10.10.10\"") {
 			testHelper.Error(t, "\t Should get back \"127.0.0.1\" for \"ipAddress\", got \"%s\"", resp.Body.String())
 		} else {
 			testHelper.Success(t, "\t Should get back \"127.0.0.1\" for \"ipAddress\"")
@@ -83,12 +65,14 @@ func TestServer(t *testing.T) {
 }
 
 func TestServersUnauthorized(t *testing.T) {
-	req, err := http.NewRequest("GET", "/api/1.0/servers", nil)
+	req, err := http.NewRequest("GET", "/api/1.0/servers?type=test", nil)
 	if err != nil {
 		testHelper.Error(t, "%s", err)
 	}
 
 	server := testHelper.InvalidHTTPServer(http.StatusUnauthorized)
+	defer server.Close()
+
 	resp := httptest.NewRecorder()
 
 	var httpClient http.Client
@@ -99,11 +83,13 @@ func TestServersUnauthorized(t *testing.T) {
 		UserAgent: &httpClient,
 	}
 
+	var c utils.Config
+
 	testHelper.Context(t, "Given the need to test a failed Get /api/1.0/servers")
 	{
-		Server(&to, resp, req)
+		Server(&c, &to, resp, req)
 
-		if resp.Code != 401 {
+		if resp.Code != http.StatusUnauthorized {
 			testHelper.Error(t, "\t Should get back \"401\" for HTTPStatusCode, got: \"%d\"", resp.Code)
 		} else {
 			testHelper.Success(t, "\t Should get back \"401\" for HTTPStatusCode")
