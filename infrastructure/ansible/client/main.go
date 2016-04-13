@@ -9,9 +9,9 @@ package main
 import (
 	"os"
 
+	"github.com/Comcast/traffic_control/traffic_ops/client"
+	"github.com/Comcast/traffic_control/traffic_ops/client/utils"
 	"github.com/cihub/seelog"
-	"github.com/jheitz200/ansible_client/traffic_ops/ansible_client/utils"
-	"github.com/jheitz200/traffic_control/traffic_ops/client"
 )
 
 func main() {

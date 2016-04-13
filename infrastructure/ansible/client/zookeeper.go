@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"strings"
 
+	"github.com/Comcast/traffic_control/traffic_ops/client"
 	"github.com/cihub/seelog"
-	"github.com/jheitz200/traffic_control/traffic_ops/client"
 )
 
 // Zookeeper ...

@@ -6,11 +6,11 @@ import (
 	"net/http"
 	"net/url"
 
+	"github.com/Comcast/traffic_control/traffic_ops/client"
 	"github.com/cihub/seelog"
-	"github.com/jheitz200/traffic_control/traffic_ops/client"
 )
 
-
+// Logstash ...
 // @Title Logstash
 // @Description queries Traffic Ops for a list of logstash servers per CDN
 // @Accept  json

@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/jheitz200/traffic_control/traffic_ops/client"
+	"github.com/Comcast/traffic_control/traffic_ops/client"
 )
 
 // Handle ...

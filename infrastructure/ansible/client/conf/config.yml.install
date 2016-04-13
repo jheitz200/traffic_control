@@ -4,7 +4,3 @@ to_server: https://tm.cdnlab.comcast.net/
 to_username: admin
 to_passwd: password
 seelog_config: /opt/ansible_client/conf/seelog.xml
-
-type:
-- logstash
-- zookeeper
