@@ -19,26 +19,8 @@ func User(to *client.Session, w http.ResponseWriter, r *http.Request) {
 		json.NewEncoder(w).Encode(err)
 		return
 	}
+	seelog.Debugf("Retrieved %d users", len(users))
 
-	var u []client.User
-	for _, value := range users {
-		if value.PublicSSHKey == "" {
-			continue
-		}
-
-		if (value.Role == "3") || (value.Role == "4") {
-			u = append(u, value)
-		} else {
-			continue
-		}
-	}
-	seelog.Debugf("Retrieved %d users", len(u))
-
-	if len(u) == 1 {
-		w.WriteHeader(http.StatusOK)
-		json.NewEncoder(w).Encode(u[0])
-	} else {
-		w.WriteHeader(http.StatusOK)
-		json.NewEncoder(w).Encode(u)
-	}
+	w.WriteHeader(http.StatusOK)
+	json.NewEncoder(w).Encode(users)
 }
